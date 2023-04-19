@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+<h1>Loops And Media</h1>
+<style>
+
+  .body{
+
+    background-image: url('/BG.jpg');
+    
+  }
+
+  </style>
+
+<div id="media-container"></div>
+
+</body>
+<script>
+const mediaContainer = document.getElementById("media-container");
+
+// create an array of media files
+const media = [
+  "video.mp4",
+  "CN Tower.jpeg",
+  "Jacob Gurevitsch - Mexican Margarita.mp3"
+];
+
+// loop through the array of media files and create HTML elements for each
+for (let i = 0; i < media.length; i++) {
+  const file = media[i];
+
+  if (file.endsWith(".mp4")) {
+    // create video element
+    const video = document.createElement("video");
+    video.src = file;
+    video.controls = true;
+    video.loop = true;
+    mediaContainer.appendChild(video);
+  } else if (file.endsWith(".jpg")) {
+    // create image element
+    const image = document.createElement("img");
+    image.src = file;
+    mediaContainer.appendChild(image);
+  } else if (file.endsWith(".mp3")) {
+    // create audio element
+    const audio = document.createElement("audio");
+    audio.src = file;
+    audio.controls = true;
+    audio.loop = true;
+    mediaContainer.appendChild(audio);
+  }
+}
+   </script>
+</html>
