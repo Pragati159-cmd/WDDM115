@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideDown("slow");
+  });
+});
+</script>
+<style> 
+#panel, #flip {
+  padding: 30px;
+  text-align: center;
+  background-color:aqua;
+  border: solid 2px antiquewhite;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+}
+
+#panel {
+  padding: 80px;
+  display: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+ 
+
+}
+
+body{
+
+    background-image: url("/BG.jpg");	
+  
+}
+</style>
+</head>
+<body>
+ 
+<div id="flip">Click for the more information</div>
+<div id="panel">Here I have used Jquery to make this web page more insightful. By clicking the button,panel opens downside and displays the content inside it.</div>
+
+</body>
+</html>
