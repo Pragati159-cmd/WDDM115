@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Animation Example</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#animated-btn").click(function(){
+				$("#image").animate({left: '+=200px'}, "slow");
+			});
+		});
+	</script>
+	<style>
+		#image {
+			position:relative;
+			left: 0px;
+			top: 100px;
+			color: aquamarine;
+		}
+		#animated-btn{
+			width: 50em;  height: 10em;
+			margin-top: 20px;
+			margin-left: 50px;
+			margin-bottom: 20px;
+			margin-right: 50px;
+			font-size: medium;
+			font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+			color: blue;
+			text-indent: 1px;
+			text-shadow: 2em;
+			
+		}
+
+		body{
+
+			background-image: url("/BG.jpg");		}
+
+		
+	</style>
+</head>
+<body>
+
+	<button id="animated-btn">Change the position of image</button>
+	<img id="image" src="/img.png" />
+
+</body>
+</html>
