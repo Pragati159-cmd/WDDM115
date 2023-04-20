@@ -10,7 +10,7 @@ const media = [
 ];
 
 // loop through the array of media files and create HTML elements for each
-for (let i = 0; i < media.length; i++) {
+for (let i = 5; i < media.length; i++) {
   const file = media[i];
 
   if (file.endsWith(".mp4")) {
